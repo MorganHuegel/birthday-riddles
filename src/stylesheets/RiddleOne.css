@@ -1,0 +1,27 @@
+.riddle-one {
+  max-width: 500px;
+}
+
+.riddle-one .first-clue-hint {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.riddle-one .clue {
+  background-color: rgb(80, 100, 140);
+  padding: 20px 20px 10px 20px;
+  border-radius: 5px;
+  width: 88%;
+  display: inline-block;
+}
+
+.riddle-one .feedback-message {
+  padding: 5px;
+  color: rgb(255, 200, 200);
+  background-color: rgb(80, 100, 140);
+  font-style: italic;
+}
+
+.riddle-one button {
+  margin-top: 20px;
+}

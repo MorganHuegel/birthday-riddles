@@ -19,6 +19,9 @@
   background-color: rgb(200, 255, 200);
   width: 100%;
   border-radius: 5px;
+  border-width: 5px;
+  border-style: dotted;
+  border-color: red blue pink orange;
 }
 
 .correct-light-box .correct-light-box-content h1 {

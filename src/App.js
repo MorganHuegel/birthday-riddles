@@ -15,7 +15,8 @@ class App extends Component {
     super(props);
     this.state = {
       pageNum: 0,
-      correctScreen: false
+      correctScreen: false,
+      correctMsg: ''
     }
   }
 
@@ -26,11 +27,12 @@ class App extends Component {
     })
   }
 
-  toggleCorrectScreen = (bool) => {
+  toggleCorrectScreen = (bool, correctMsg) => {
     const newPageNumber = bool ? this.state.pageNum : this.state.pageNum + 1;
     this.setState({
       pageNum: newPageNumber,
-      correctScreen: bool
+      correctScreen: bool,
+      correctMsg
     })
   }
 
@@ -39,10 +41,10 @@ class App extends Component {
     let mainComponent;
     switch (this.state.pageNum) {
       case(0):
-        mainComponent = <Landing />
+        mainComponent = <Landing changePageNum={this.changePageNum}/>
         break;
       case(1):
-        mainComponent = <RiddleOne />
+        mainComponent = <RiddleOne toggleCorrectScreen={this.toggleCorrectScreen}/>
         break;
       case(2):
         mainComponent = <RiddleTwo />
@@ -60,15 +62,14 @@ class App extends Component {
         mainComponent = null;
     }
 
-    const correctLightBox = this.state.correctScreen ? <CorrectLightBox toggleCorrectScreen={this.toggleCorrectScreen}/> : null
+    const correctLightBox = this.state.correctScreen ? <CorrectLightBox toggleCorrectScreen={this.toggleCorrectScreen} correctMsg={this.state.correctMsg}/> : null
 
     return (
       <div className="App">
         {correctLightBox}
         <header className="App-header">
-          <img src={"http://www.stickpng.com/assets/thumbs/58597bdf4f6ae202fedf2896.png"} className="App-logo" alt="logo" />
+          {mainComponent}
         </header>
-        {mainComponent}
       </div>
     );
   }
