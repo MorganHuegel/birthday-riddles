@@ -1,0 +1,25 @@
+.riddle-four .clue {
+  background-color: rgb(80, 100, 140);
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  width: 88%;
+  display: inline-block;
+  font-style: italic;
+}
+
+.riddle-four input {
+  margin: 20px 0;
+}
+
+.riddle-four .feedback {
+  background-color: rgb(80, 100, 140);
+  width: 90%;
+  display: inline-block;
+  padding: 5px;
+  color: rgb(255, 200, 200);
+  border-radius: 5px;
+}
+
+.riddle-four .hidden {
+  display: none;
+}

@@ -14,7 +14,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      pageNum: 3,
+      pageNum: 4,
       correctScreen: false,
       correctMsg: ''
     }
@@ -53,7 +53,7 @@ class App extends Component {
         mainComponent = <RiddleThree toggleCorrectScreen={this.toggleCorrectScreen}/>
         break;
       case(4):
-        mainComponent = <RiddleFour />
+        mainComponent = <RiddleFour toggleCorrectScreen={this.toggleCorrectScreen}/>
         break;
       case(5):
         mainComponent = <RiddleFive />
