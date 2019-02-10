@@ -25,3 +25,7 @@
 .riddle-one button {
   margin-top: 20px;
 }
+
+.riddle-one .hidden {
+  display: none;
+}

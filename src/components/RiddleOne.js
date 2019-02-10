@@ -72,6 +72,8 @@ export class RiddleOne extends React.Component {
         break;
     }
 
+    const hiddenClass = this.state.numberOfGuesses === 0 ? 'hidden' : '';
+
     return (
       <div className='riddle-one'>
         <h2>Clue #1</h2>
@@ -87,7 +89,7 @@ export class RiddleOne extends React.Component {
         <div>
           <button onClick={event => this.checkAnswer(event)}>Submit</button>
         </div>
-        <p className='feedback-message'>{feedbackMsg}</p>
+        <p className={`feedback-message ${hiddenClass}`} id='riddle-one-feedback'>{feedbackMsg}</p>
       </div>
     )
   }
