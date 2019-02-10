@@ -19,7 +19,7 @@ export class RiddleThree extends React.Component {
       if (this.state.numOfGuesses < 3) {
         correctMsg = 'Easy peasy!'
       } else if (this.state.numOfGuesses < 5) {
-        correctMsg = 'Not bad! You might see your present afterall!';
+        correctMsg = 'Not bad! You might see your present after all!';
       } else if (this.state.numOfGuesses < 7) {
         correctMsg = '...although I have my doubts...';
       } else if (this.state.numOfGuesses < 10) {

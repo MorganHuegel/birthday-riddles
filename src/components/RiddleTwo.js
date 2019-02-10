@@ -18,25 +18,25 @@ export class RiddleTwo extends React.Component {
   onClick = (event) => {
     const innerText = event.target.innerText;
 
-    if (innerText === '25' && this.state.numOfGuesses < 5) {
+    if (innerText === '25' && this.state.numOfGuesses < 4) {
       this.setState({
         feedbackMsg: 'Hmm that\'s what you might think. This is a riddle though...', 
         numOfGuesses: this.state.numOfGuesses + 1,
         guessed25: true
       })
-    } else if (innerText === '24' && this.state.numOfGuesses < 5) {
+    } else if (innerText === '24' && this.state.numOfGuesses < 4) {
       this.setState({
         feedbackMsg: 'No Carmen, you were 24 yesterday! Must\'ve had too much alcohol last night...', 
         numOfGuesses: this.state.numOfGuesses + 1,
         guessed24: true
       })
-    } else if (innerText === '26' && this.state.numOfGuesses < 5) {
+    } else if (innerText === '26' && this.state.numOfGuesses < 4) {
       this.setState({
         feedbackMsg: 'Not 26 yet! You\'re getting ahead of yourself.', 
         numOfGuesses: this.state.numOfGuesses + 1,
         guessed26: true
       })
-    } else if (innerText === '53' && this.state.numOfGuesses < 5) {
+    } else if (innerText === '53' && this.state.numOfGuesses < 4) {
       this.setState({
         feedbackMsg: 'Why the fuck would your age be 53?', 
         numOfGuesses: this.state.numOfGuesses + 1,
@@ -66,19 +66,19 @@ export class RiddleTwo extends React.Component {
       this.props.toggleCorrectScreen(true, correctMsg);
     } 
 
-    else if (this.state.numOfGuesses === 5){
+    else if (this.state.numOfGuesses === 4){
       this.setState({feedbackMsg: 'It\'s multiple choice; how did you need more than 4 guesses??', numOfGuesses: this.state.numOfGuesses + 1})
-    } else if (this.state.numOfGuesses === 6){
+    } else if (this.state.numOfGuesses === 5){
       this.setState({feedbackMsg: 'Maybe you should just re-read the riddle', numOfGuesses: this.state.numOfGuesses + 1})
-    } else if (this.state.numOfGuesses === 7){
+    } else if (this.state.numOfGuesses === 6){
       this.setState({feedbackMsg: 'But really, re-read the riddle. What does "your age" mean?', numOfGuesses: this.state.numOfGuesses + 1})
-    } else if (this.state.numOfGuesses === 8){
+    } else if (this.state.numOfGuesses === 7){
       this.setState({feedbackMsg: 'Oh my god, it\'s hopeless...', numOfGuesses: this.state.numOfGuesses + 1})
-    } else if (this.state.numOfGuesses === 9){
+    } else if (this.state.numOfGuesses === 8){
       this.setState({feedbackMsg: 'But seriously, just click on "your age"', numOfGuesses: this.state.numOfGuesses + 1})
-    } else if (this.state.numOfGuesses === 10){
+    } else if (this.state.numOfGuesses === 9){
       this.setState({feedbackMsg: 'YOUR AGE!!!!', numOfGuesses: this.state.numOfGuesses + 1})
-    } else if (this.state.numOfGuesses === 11){
+    } else if (this.state.numOfGuesses === 10){
       this.setState({feedbackMsg: '"YOUR AGE". Is it changing colors yet??', numOfGuesses: this.state.numOfGuesses + 1})
 
     }

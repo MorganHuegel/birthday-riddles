@@ -1,5 +1,6 @@
 .riddle-two-option {
   font-size: 1.5rem;
+  text-decoration: underline;
 }
 
 .riddle-two-option.guessed {
