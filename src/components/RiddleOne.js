@@ -76,7 +76,7 @@ export class RiddleOne extends React.Component {
 
     return (
       <div className='riddle-one'>
-        <h2>Clue #1</h2>
+        <h2>Riddle #1</h2>
         <p className='clue'>
           <span className='first-clue-hint'>w + h + a + t</span>
           <span className='first-clue-hint'>i + s</span>

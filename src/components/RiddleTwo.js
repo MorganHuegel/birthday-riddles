@@ -105,7 +105,7 @@ export class RiddleTwo extends React.Component {
 
     return (
     <div className='riddle-two'>
-      <h2>Clue #2</h2>
+      <h2>Riddle #2</h2>
       <div className='clue'>
         <p>You're getting so damn old! This riddle is easy; Just click on <span className={strugglingHint} id='your-age-link' onClick={event => this.onClick(event)}>your age</span>.</p>
         <p className={`riddle-two-option ${guessed24}`} onClick={event => this.onClick(event)}>24</p>

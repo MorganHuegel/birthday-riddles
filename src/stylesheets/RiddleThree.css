@@ -1,0 +1,39 @@
+.riddle-three {
+  padding: calc(100vh - 600px) 10px;
+}
+
+.riddle-three .clue {
+  background-color: rgb(80, 100, 140);
+  padding: 20px 20px 10px 20px;
+  border-radius: 5px;
+  width: 88%;
+  display: inline-block;
+  line-height: 4rem;
+}
+
+@media only screen and (max-width: 450px) {
+  .riddle-three {
+    padding: 100px 10px;
+  }
+}
+
+.riddle-three #link {
+  display: inline-block;
+  width: 60px;
+  height: 26px;
+  position: relative;
+  bottom: 26px;
+  right: 52px;
+}
+
+.riddle-three .ten-guesses {
+  background-color: rgb(85, 105, 145);
+}
+
+.riddle-three .thirteen-guesses {
+  background-color: rgb(90, 110, 150);
+}
+
+.riddle-three .fourteen-guesses {
+  background-color: rgb(120, 140, 255);
+}
