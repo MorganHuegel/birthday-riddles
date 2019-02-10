@@ -1,0 +1,33 @@
+.riddle-five .clue {
+  background-color: rgb(80, 100, 140);
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  width: 88%;
+  display: inline-block;
+  font-style: italic;
+}
+
+.riddle-five input {
+  margin: 20px 0;
+}
+
+.riddle-five button {
+  margin-bottom: 20px;
+}
+
+.riddle-five label {
+  display: block;
+  padding:10px;
+}
+
+.riddle-five .hidden {
+  display: none;
+}
+
+.riddle-five .feedback {
+  background-color: rgb(120, 80, 120);
+  width: 90%;
+  border-radius: 5px;
+  margin: 20px auto;
+  padding: 5px;
+}

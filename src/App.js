@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import './App.css';
 
 import { Landing } from './components/Landing';
@@ -14,7 +15,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      pageNum: 4,
+      pageNum: 0,
       correctScreen: false,
       correctMsg: ''
     }
@@ -56,13 +57,23 @@ class App extends Component {
         mainComponent = <RiddleFour toggleCorrectScreen={this.toggleCorrectScreen}/>
         break;
       case(5):
-        mainComponent = <RiddleFive />
+        mainComponent = <RiddleFive toggleCorrectScreen={this.toggleCorrectScreen}/>
         break;
       default:
         mainComponent = null;
     }
 
-    const correctLightBox = this.state.correctScreen ? <CorrectLightBox toggleCorrectScreen={this.toggleCorrectScreen} correctMsg={this.state.correctMsg}/> : null
+    let buttonMsg = 'Next Question';
+
+    // WIN State
+    if (this.state.pageNum === 5 && this.state.correctScreen) {
+      mainComponent = null;
+      buttonMsg = 'See Present'
+    }
+
+    const correctLightBox = this.state.correctScreen ? 
+      <CorrectLightBox toggleCorrectScreen={this.toggleCorrectScreen} correctMsg={this.state.correctMsg} buttonMsg={buttonMsg}/> 
+      : null;
 
     return (
       <div className="App">

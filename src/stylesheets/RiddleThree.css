@@ -37,3 +37,9 @@
 .riddle-three .fourteen-guesses {
   background-color: rgb(120, 140, 255);
 }
+
+.riddle-three .feedback {
+  color: rgb(255, 210, 210);
+  font-style: italic;
+  padding: 5px;
+}
